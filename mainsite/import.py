@@ -1,11 +1,11 @@
 import csv,sys,os
-project_dir = "C:\wen\wen"
+project_dir = "C:\wen123\wen"
 sys.path.append(project_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = "wen.settings"
 import django
 django.setup()
 from mainsite.models import company
-data = csv.reader(open("C:\wen\wen\mainsite\data.csv",encoding="utf-8"),delimiter=",",)
+data = csv.reader(open("C:\wen123\wen\mainsite\data.csv",encoding="utf-8"),delimiter=",",)
 for row in data:
     if row[0] !='time':
         unit = company()
